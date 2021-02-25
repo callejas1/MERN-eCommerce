@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Airpods wireless bluetooth headphones',
     image: '/images/airpods.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: '2',
     name: 'alexa',
     image: '/images/alexa.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '3',
     name: 'camera',
     image: '/images/camera.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '4',
     name: 'mouse',
     image: '/images/mouse.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 18,
   },
   {
-    _id: '5',
     name: 'phone',
     image: '/images/phone.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'playstation',
     image: '/images/playstation.jpg',
     description:
@@ -79,4 +73,4 @@ const products = [
   },
 ];
 
-module.exports = products;
+export default products;
