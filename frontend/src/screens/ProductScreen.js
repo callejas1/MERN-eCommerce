@@ -16,7 +16,7 @@ import Message from '../components/Message';
 import { listProductDetails } from '../actions/productActions';
 
 const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
 
@@ -32,7 +32,7 @@ const ProductScreen = ({ history, match }) => {
   };
 
   return (
-    <div>
+    <>
       <Link className="btn btn-light my-3" to="/">
         Go back
       </Link>
@@ -119,7 +119,7 @@ const ProductScreen = ({ history, match }) => {
           </Col>
         </Row>
       )}
-    </div>
+    </>
   );
 };
 
