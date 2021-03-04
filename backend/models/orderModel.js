@@ -2,13 +2,12 @@ import mongoose from 'mongoose';
 
 const orderSchema = mongoose.Schema(
   {
-    // track which user ordered x product
     user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'User',
     },
-    order: [
+    orderItems: [
       {
         name: { type: String, required: true },
         qty: { type: Number, required: true },
@@ -32,10 +31,9 @@ const orderSchema = mongoose.Schema(
       required: true,
     },
     paymentResult: {
-      // after getting data back from PayPal
       id: { type: String },
       status: { type: String },
-      updated_time: { type: String },
+      update_time: { type: String },
       email_address: { type: String },
     },
     taxPrice: {
@@ -67,7 +65,7 @@ const orderSchema = mongoose.Schema(
       default: false,
     },
     deliveredAt: {
-      type: String,
+      type: Date,
     },
   },
   {
