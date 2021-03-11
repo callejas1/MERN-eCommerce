@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { getUserDetails, updateUserProfile } from '../actions/userActions';
-import { listMyOrders } from '../actions/orderAction';
+import { listMyOrders } from '../actions/orderActions';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
 
 const ProfileScreen = ({ location, history }) => {
@@ -53,7 +53,7 @@ const ProfileScreen = ({ location, history }) => {
     }
   };
 
-  const xIconStyle = {
+  const xStyle = {
     color: 'red',
     display: 'flex',
     justifyContent: 'center',
@@ -147,14 +147,14 @@ const ProfileScreen = ({ location, history }) => {
                     {order.isPaid ? (
                       order.paidAt.substring(0, 10)
                     ) : (
-                      <i className="fas fa-times" style={xIconStyle}></i>
+                      <i className="fas fa-times" style={xStyle}></i>
                     )}
                   </td>
                   <td>
                     {order.isDelivered ? (
                       order.deliveredAt.substring(0, 10)
                     ) : (
-                      <i className="fas fa-times" style={xIconStyle}></i>
+                      <i className="fas fa-times" style={xStyle}></i>
                     )}
                   </td>
 

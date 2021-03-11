@@ -31,6 +31,13 @@ const UserListScreen = ({ history }) => {
       dispatch(deleteUser(id));
     }
   };
+
+  const xStyle = {
+    color: 'red',
+    display: 'flex',
+    justifyContent: 'center',
+  };
+
   return (
     <>
       <h1>Users</h1>
@@ -59,9 +66,16 @@ const UserListScreen = ({ history }) => {
                 </td>
                 <td>
                   {user.isAdmin ? (
-                    <i className="fas fa-check" style={{ color: 'green' }}></i>
+                    <i
+                      className="fas fa-check"
+                      style={{
+                        color: 'green',
+                        display: 'flex',
+                        justifyContent: 'center',
+                      }}
+                    ></i>
                   ) : (
-                    <i className="fas fa-times" style={{ color: 'red' }}></i>
+                    <i className="fas fa-times" style={xStyle}></i>
                   )}
                 </td>
                 <td>
